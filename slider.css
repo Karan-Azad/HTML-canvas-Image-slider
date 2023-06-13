@@ -38,5 +38,13 @@ ul { padding-left: 1em; }
 #canvas {
     width: 100%;
     cursor: grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
     background-color: rgb(238, 238, 238);
+}
+
+#canvas.grab-active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
 }

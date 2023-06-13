@@ -109,10 +109,8 @@ function initialiseCanvas(dx) {
 function onDragEvent() {
     var canvas = document.getElementById("canvas");
     var mouseDownHandler = function (e) {
-        console.log("hello");
         if (canvas) {
-            canvas.style.cursor = 'grabbing';
-            canvas.style.userSelect = 'none';
+            canvas.className = "grab-active";
             positionX = mouseUpPosition + e.clientX;
         }
         document.addEventListener('mousemove', mouseMoveHandler);
@@ -136,8 +134,7 @@ function onDragEvent() {
         document.removeEventListener('mousemove', mouseMoveHandler);
         document.removeEventListener('mouseup', mouseUpHandler);
         if (canvas) {
-            canvas.style.cursor = 'grab';
-            canvas.style.removeProperty('user-select');
+            canvas.className = "";
         }
     };
     // Attach the handler

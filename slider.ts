@@ -110,10 +110,8 @@ function onDragEvent() {
     const canvas = document.getElementById("canvas");
 
     const mouseDownHandler = function (e) {
-        console.log("hello");
         if (canvas) {
-            canvas.style.cursor = 'grabbing';
-            canvas.style.userSelect = 'none';
+            canvas.className = "grab-active";
 
             positionX = mouseUpPosition + e.clientX;
         }
@@ -141,10 +139,8 @@ function onDragEvent() {
         document.removeEventListener('mousemove', mouseMoveHandler);
         document.removeEventListener('mouseup', mouseUpHandler);
 
-
         if (canvas) {
-            canvas.style.cursor = 'grab';
-            canvas.style.removeProperty('user-select');
+            canvas.className = "";
         }
     };
 
