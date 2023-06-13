@@ -1,0 +1,1 @@
+Build is not necessary as the html references the compiled js file. If one would like to rebuild after, for exmaple, adding more images to the slider, make sure you are in the right directory in the terminal and then run the following line: tsc slider.ts --watch --lib "es2015, es2016, dom"
