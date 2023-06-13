@@ -1,2 +1,2 @@
-Build is not necessary as the html references the compiled js file. Simply open the html file on your broswer and begin using the slider.
-If one would like to rebuild after, for example, adding more images to the slider by editing the imageSource array, make sure you are in the right directory in the terminal and then run the following line: tsc slider.ts --watch --lib "es2015, es2016, dom"
+Build is not necessary as the html references the compiled js file. Simply open the html file on your browser and begin using the slider.
+If one would like to add more images to the slider by editing the imageSource array to test if more images can be added easily, make sure you are in the right directory in the terminal and then build by runingn the following command: tsc slider.ts --watch --lib "es2015, es2016, dom"
