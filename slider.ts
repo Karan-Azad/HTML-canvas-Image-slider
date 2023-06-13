@@ -1,3 +1,4 @@
+//Global variables
 let positionX = 0;
 let mouseUpPosition = 0;
 let canvasInnerWidth = 0;
