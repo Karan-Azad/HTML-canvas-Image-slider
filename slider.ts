@@ -127,12 +127,15 @@ function onDragEvent() {
 
         // Scroll the element
         if (canvas) {
-            if (dx > 0 || dx < -(canvasInnerWidth)) {
-                document.removeEventListener('mousemove', mouseMoveHandler);
-            } else {
-                initialiseCanvas(dx);
-                mouseUpPosition = -(dx);
+            //constraint dx
+            if (dx > 0) {
+                dx = 0;
+            } else if (dx < -(canvasInnerWidth)) {
+                dx = -(canvasInnerWidth);
             }
+
+            initialiseCanvas(dx);
+            mouseUpPosition = -(dx);
         }
     };
 

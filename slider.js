@@ -122,13 +122,15 @@ function onDragEvent() {
         var dx = e.clientX - positionX;
         // Scroll the element
         if (canvas) {
-            if (dx > 0 || dx < -(canvasInnerWidth)) {
-                document.removeEventListener('mousemove', mouseMoveHandler);
+            //constraint dx
+            if (dx > 0) {
+                dx = 0;
             }
-            else {
-                initialiseCanvas(dx);
-                mouseUpPosition = -(dx);
+            else if (dx < -(canvasInnerWidth)) {
+                dx = -(canvasInnerWidth);
             }
+            initialiseCanvas(dx);
+            mouseUpPosition = -(dx);
         }
     };
     var mouseUpHandler = function () {
